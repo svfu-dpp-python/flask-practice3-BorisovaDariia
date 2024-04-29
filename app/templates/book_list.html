@@ -5,7 +5,9 @@
 <ul>
     {% for b in books %}
     <li>
+        <a href="{{ url_for('book_edit', pk=b.pk) }}">
         {{ b }}
+        </a>
         <a href="{{ url_for('book_delete', pk=b.pk) }}">
             <i class="bi bi-trash-fill"></i>
         </a>
